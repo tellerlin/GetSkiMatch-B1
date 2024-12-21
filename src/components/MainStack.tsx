@@ -4,8 +4,7 @@ import { stackNavigatorFactory } from "react-nativescript-navigation";
 
 import { ScreenOne } from "./ScreenOne";
 import { ScreenTwo } from "./ScreenTwo";
-
-const StackNavigator = stackNavigatorFactory();
+import { FilterPanel } from './FilterPanel';
 
 /**
  * The main stack navigator for the whole app.
@@ -29,6 +28,12 @@ export const MainStack = () => (
                 name="Two"
                 component={ScreenTwo}
             />
+            <StackNavigator.Screen
+                name="Filter"
+                component={FilterPanel}
+            />
         </StackNavigator.Navigator>
     </BaseNavigationContainer>
 );
+
+const StackNavigator = stackNavigatorFactory();

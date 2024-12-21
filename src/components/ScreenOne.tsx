@@ -5,6 +5,7 @@ import { StyleSheet } from "react-nativescript";
 import { FrameNavigationProp } from "react-nativescript-navigation";
 
 import { MainStackParamList } from "../NavigationParamList";
+import { FilterPanel } from './FilterPanel'; 
 
 type ScreenOneProps = {
     route: RouteProp<MainStackParamList, "One">,
@@ -15,8 +16,13 @@ export function ScreenOne({ navigation }: ScreenOneProps) {
     return (
         <flexboxLayout style={styles.container}>
             <label className="text-2xl mb-4 font-bold text-center">
-                Hello World!
+                Welcome to Get Ski Match!
             </label>
+            <label className="text-2xl mb-4 font-bold text-center">
+                Welcome to Get Ski Match!
+            </label>
+            <FilterPanel />
+            <FilterPanel />
             <button
                 style={styles.button}
                 onTap={() => Dialogs.alert("Tapped!")}
